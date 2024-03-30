@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Pessoal - Henrique Velasco de Castro Ezequiel</title>
+    <style>
+        /* Preenchimento e margens Css */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilos do cabeçalho */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li button {
+            color: #fff;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Estilos das seções */
+        .hidden {
+            display: none;
+        }
+
+        section {
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #f4f4f4;
+        }
+
+        /* Estilização para os links de navegação */
+        nav button:hover {
+            color: #ffd700; /* Atribui a cor amarela quando passo o mouse por cima */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Henrique Velasco de Castro Ezequiel</h1>
+        <nav>
+            <ul>
+                <li><button onclick="toggleSection('sobre-mim')">Quem Sou Eu</button></li>
+                <li><button onclick="toggleSection('formacao-academica')">Formação Acadêmica</button></li>
+                <li><button onclick="toggleSection('portfolio')">Portfólio Pessoal</button></li>
+                <li><button onclick="toggleSection('contato')">Contatos</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="sobre-mim" class="hidden">
+        <h2>Quem Sou Eu</h2>
+        Me chamo Henrique Velasco de Castro Ezequiel, tenho 31 anos de idade e sou casado há 03 anos. Moro atualmente em São Paulo/SP com minha esposa e meus 04 gatos que vieram de resgate, sendo que a causa animal é muito importante para mim. Nos momentos de lazer eu gosto de praticar esportes radicais e visitar a cidade de Peruíbe, localizada no litoral sul de São Paulo. Por ter crescido na praia, tenho muito contato e afinidade com os animais.
+    </section>
+
+    <section id="formacao-academica" class="hidden">
+        <h2>Formação Acadêmica</h2>
+        Ensino Médio Completo - Colégio Irene Bargieri<br>
+        Ensino Superior Completo - Direito na FMU<br>
+        Ensino Superior em Andamento - ADS na Uninter
+    </section>
+
+    <section id="portfolio" class="hidden">
+        <h2>Portfólio Pessoal</h2>
+        <a href="https://colab.research.google.com/drive/1pdgwuhhDM5sWSto-gX1_WlJIluXjFRDN"> Veja um trabalho meu!</a>
+    </section>
+
+    <section id="contato" class="hidden">
+        <h2>Contatos</h2>
+        Contato Celular: (11) 987654321<br>
+        E-mail: henriqueuninter@hotmail.com
+    </section>
+
+    <script>
+        function toggleSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            if (section.classList.contains('hidden')) {
+                section.classList.remove('hidden');
+            } else {
+                section.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
